@@ -10,6 +10,8 @@
                     </h1>
                     <small>
                         {{descriptionText}}
+                        <br/>
+                        Office is open-source full-stack solution for work-tracking: <a class="btn btn-primary btn-xs" href="http://meanjs.org" target="_blank">Learn more</a>
                     </small>
                 </div>
             </div>
