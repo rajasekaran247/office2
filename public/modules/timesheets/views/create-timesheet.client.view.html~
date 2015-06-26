@@ -1,0 +1,59 @@
+<section data-ng-controller="TimesheetsController">
+    <div class="page-header">
+        <h1>New Timesheet</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="SelectEntryType">Select Entry Type</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="SelectEntryType" id="SelectEntryType" class="form-control" placeholder="eg:., Billable/Non-billable" required>
+                    </div>
+                </div>
+		<div class="form-group">
+                    <label class="control-label" for="Job">Job</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Job" id="Job" class="form-control" placeholder="eg:., accounting" required>
+                    </div>
+                </div>
+
+		<div class="form-group">
+                    <label class="control-label" for="StartTime">Start Time</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="StartTime" id="StartTime" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+
+		<div class="form-group">
+                    <label class="control-label" for="EndTime">End Time</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="EndTime" id="EndTime" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+
+		<div class="form-group">
+                    <label class="control-label" for="ActivityCode">Activity Code</label>
+                    <div class="controls">
+                        <input type="Number" data-ng-model="ActivityCode" id="ActivityCode" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+
+		<div class="form-group">
+                    <label class="control-label" for="Comment">Comment</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Comment" id="Comment" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+		
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

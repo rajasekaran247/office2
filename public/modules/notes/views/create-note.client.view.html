@@ -1,0 +1,83 @@
+<section data-ng-controller="NotesController">
+    <div class="page-header">
+        <h1>New Note</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+               <div class="form-group">
+                    <label class="control-label" for="JobId">Job Id</label>
+                    <div class="controls">
+                        <input type="Number" data-ng-model="JobId" id="JobId" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Notesdate">Notes date</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="Notesdate" id="Notesdate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Category">Category</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Category" id="Category" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Note">Note</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Note" id="Note" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Remindon">Remindon</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="Remindon" id="Remindon" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Reminderemailaddress">Reminder email address</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Reminderemailaddress" id="Reminderemailaddress" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Repeatreminderonyear">Repeat reminder on year</label>
+                    <div class="controls">
+                        <input type="Number" data-ng-model="Repeatreminderonyear" id="Repeatreminderonyear" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Repeatreminderonmonth">Repeat reminder on month</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="Repeatreminderonmonth" id="Repeatreminderonmonth" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Repeatreminderondays">Repeat reminder on days</label>
+                    <div class="controls">
+                        <input type="Date" data-ng-model="Repeatreminderondays" id="Repeatreminderondays" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Repeatreminderendby">Repeat reminder end by</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="Repeatreminderendby" id="Repeatreminderendby" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="control-label" for="CreatedBy">Created By</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="CreatedBy" id="CreatedBy" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
