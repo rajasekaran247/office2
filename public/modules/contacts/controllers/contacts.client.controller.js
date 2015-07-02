@@ -13,7 +13,7 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 				Code: this.Code,
 				Type: this.Type,
 				ContactType: this.ContactType,	
-				Mailing: this.Mailing,
+				MailingName: this.MailingName,
 				Salutation: this.Salutation,
 				TAN: this.TAN,
 				PAN: this.PAN,
