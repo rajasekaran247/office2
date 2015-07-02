@@ -7,17 +7,13 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Document Schema
+ * Odoc Schema
  */
-var DocumentSchema = new Schema({
-	jobid: {
-		type: Number,
-		trim: true
-	},
-	file: {
+var OdocSchema = new Schema({
+	name: {
 		type: String,
 		default: '',
-		required: '',
+		required: 'Please fill Odoc name',
 		trim: true
 	},
 	created: {
@@ -30,4 +26,4 @@ var DocumentSchema = new Schema({
 	}
 });
 
-mongoose.model('Document', DocumentSchema);
+mongoose.model('Odoc', OdocSchema);

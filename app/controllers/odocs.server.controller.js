@@ -5,102 +5,102 @@
  */
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
-	Document = mongoose.model('Document'),
+	Odoc = mongoose.model('Odoc'),
 	_ = require('lodash');
 
 /**
- * Create a Document
+ * Create a Odoc
  */
 exports.create = function(req, res) {
-	var document = new Document(req.body);
-	document.user = req.user;
+	var odoc = new Odoc(req.body);
+	odoc.user = req.user;
 
-	document.save(function(err) {
+	odoc.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(document);
+			res.jsonp(odoc);
 		}
 	});
 };
 
 /**
- * Show the current Document
+ * Show the current Odoc
  */
 exports.read = function(req, res) {
-	res.jsonp(req.document);
+	res.jsonp(req.odoc);
 };
 
 /**
- * Update a Document
+ * Update a Odoc
  */
 exports.update = function(req, res) {
-	var document = req.document ;
+	var odoc = req.odoc ;
 
-	document = _.extend(document , req.body);
+	odoc = _.extend(odoc , req.body);
 
-	document.save(function(err) {
+	odoc.save(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(document);
+			res.jsonp(odoc);
 		}
 	});
 };
 
 /**
- * Delete an Document
+ * Delete an Odoc
  */
 exports.delete = function(req, res) {
-	var document = req.document ;
+	var odoc = req.odoc ;
 
-	document.remove(function(err) {
+	odoc.remove(function(err) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(document);
+			res.jsonp(odoc);
 		}
 	});
 };
 
 /**
- * List of Documents
+ * List of Odocs
  */
 exports.list = function(req, res) { 
-	Document.find().sort('-created').populate('user', 'displayName').exec(function(err, documents) {
+	Odoc.find().sort('-created').populate('user', 'displayName').exec(function(err, odocs) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(documents);
+			res.jsonp(odocs);
 		}
 	});
 };
 
 /**
- * Document middleware
+ * Odoc middleware
  */
-exports.documentByID = function(req, res, next, id) { 
-	Document.findById(id).populate('user', 'displayName').exec(function(err, document) {
+exports.odocByID = function(req, res, next, id) { 
+	Odoc.findById(id).populate('user', 'displayName').exec(function(err, odoc) {
 		if (err) return next(err);
-		if (! document) return next(new Error('Failed to load Document ' + id));
-		req.document = document ;
+		if (! odoc) return next(new Error('Failed to load Odoc ' + id));
+		req.odoc = odoc ;
 		next();
 	});
 };
 
 /**
- * Document authorization middleware
+ * Odoc authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-	if (req.document.user.id !== req.user.id) {
+	if (req.odoc.user.id !== req.user.id) {
 		return res.status(403).send('User is not authorized');
 	}
 	next();

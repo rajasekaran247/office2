@@ -6,17 +6,17 @@
 var should = require('should'),
 	mongoose = require('mongoose'),
 	User = mongoose.model('User'),
-	Document = mongoose.model('Document');
+	Odoc = mongoose.model('Odoc');
 
 /**
  * Globals
  */
-var user, document;
+var user, odoc;
 
 /**
  * Unit tests
  */
-describe('Document Model Unit Tests:', function() {
+describe('Odoc Model Unit Tests:', function() {
 	beforeEach(function(done) {
 		user = new User({
 			firstName: 'Full',
@@ -28,8 +28,8 @@ describe('Document Model Unit Tests:', function() {
 		});
 
 		user.save(function() { 
-			document = new Document({
-				name: 'Document Name',
+			odoc = new Odoc({
+				name: 'Odoc Name',
 				user: user
 			});
 
@@ -39,16 +39,16 @@ describe('Document Model Unit Tests:', function() {
 
 	describe('Method Save', function() {
 		it('should be able to save without problems', function(done) {
-			return document.save(function(err) {
+			return odoc.save(function(err) {
 				should.not.exist(err);
 				done();
 			});
 		});
 
 		it('should be able to show an error when try to save without name', function(done) { 
-			document.name = '';
+			odoc.name = '';
 
-			return document.save(function(err) {
+			return odoc.save(function(err) {
 				should.exist(err);
 				done();
 			});
@@ -56,7 +56,7 @@ describe('Document Model Unit Tests:', function() {
 	});
 
 	afterEach(function(done) { 
-		Document.remove().exec();
+		Odoc.remove().exec();
 		User.remove().exec();
 
 		done();
