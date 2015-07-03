@@ -1,0 +1,44 @@
+<section data-ng-controller="InvoicedetailsController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Invoicedetail</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="sno">sno</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="invoicedetail.sno" id="sno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+           <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="particulars">Particulars</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="invoicedetail.particulars" id="particulars" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	   <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="amount">Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="invoicedetail.amount" id="amount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	   <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="notes">Notes</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="invoicedetail.notes" id="notes" class="form-control" placeholder="" required>
+                    </div>
+                </div>  
+	   <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

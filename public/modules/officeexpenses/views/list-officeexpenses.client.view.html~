@@ -1,0 +1,19 @@
+<section data-ng-controller="OfficeexpensesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Officeexpenses</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="officeexpense in officeexpenses" data-ng-href="#!/officeexpenses/{{officeexpense._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="officeexpense.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="officeexpense.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading">{{ officeexpense.entryno }} {{ officeexpense.date }} {{ officeexpense.employeename }} {{ officeexpense.sno }} {{ officeexpense.description }} {{ officeexpense.amount }} {{ officeexpense.notes }}</h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!officeexpenses.$resolved || officeexpenses.length">
+    	No Officeexpenses yet, why don't you <a href="/#!/officeexpenses/create">create one</a>?
+    </div>
+</section>

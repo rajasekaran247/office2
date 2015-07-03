@@ -1,0 +1,86 @@
+<section data-ng-controller="TravelreimbursementdetailsController">
+    <div class="page-header">
+        <h1>New Travelreimbursementdetail</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="sno">S No</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="sno" id="sno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="clientlocation">Client Location</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="clientlocation" id="clientlocation" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="jobno">Job No</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="jobno" id="jobno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="fromdate">From Date</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="fromdate" id="fromdate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="todate">To Date</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="todate" id="todate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="noofdays">No of Days</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="noofdays" id="noofdays" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="conveyance">conveyance</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="conveyance" id="conveyance" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="foodallowance">Food Allowance</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="foodallowance" id="foodallowance" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="otherexpenses">Other Expenses</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="otherexpenses" id="otherexpenses" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="totalamount">Total Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="totalamount" id="totalamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

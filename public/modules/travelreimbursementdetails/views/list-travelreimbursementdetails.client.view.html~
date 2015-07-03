@@ -1,0 +1,19 @@
+<section data-ng-controller="TravelreimbursementdetailsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Travelreimbursementdetails</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="travelreimbursementdetail in travelreimbursementdetails" data-ng-href="#!/travelreimbursementdetails/{{travelreimbursementdetail._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="travelreimbursementdetail.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="travelreimbursementdetail.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading">{{ travelreimbursementdetail.sno }} {{ travelreimbursementdetail.clientlocation }} {{ travelreimbursementdetail.jobno }} {{ travelreimbursementdetail.fromdate }} {{ travelreimbursementdetail.todate }} {{ travelreimbursementdetail.noofdays }} {{ travelreimbursementdetail.conveyance }} {{ travelreimbursementdetail.foodallowance }} {{ travelreimbursementdetail.otherexpenses }} {{ travelreimbursementdetail.totalamount }}</h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!travelreimbursementdetails.$resolved || travelreimbursementdetails.length">
+    	No Travelreimbursementdetails yet, why don't you <a href="/#!/travelreimbursementdetails/create">create one</a>?
+    </div>
+</section>

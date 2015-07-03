@@ -1,0 +1,93 @@
+<section data-ng-controller="EnquiriesController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Enquiry</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="enquiryno">enquiry no</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="enquiry.enquiryno" id="enquiryno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="enquirydate">enquiry date</label>
+                    <div class="controls">
+                        <input type="date" data-ng-model="enquiry.enquirydate" id="enquirydate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="clientname">client name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.clientname" id="clientname" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="handlingresource">handling resource</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.handlingresource" id="handlingresource" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="areaofenquiry">area of enquiry</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.areaofenquiry" id="areaofenquiry" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="modeofreceipt">mode of receipt</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.modeofreceipt" id="modeofreceipt" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="billable">billable</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.billable" id="billable" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="status">status</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.status" id="status" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="groupaffilation">group affilation</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.groupaffilation" id="groupaffilation" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="preparedby">prepared by</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.preparedby" id="preparedby" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="remarks">remarks</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="enquiry.remarks" id="remarks" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,149 @@
+<section data-ng-controller="InvoicesController">
+    <div class="page-header">
+        <h1>New Invoice</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="invoiceno">Invoice No</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="invoiceno" id="invoiceno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+   	    <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="invoicedate">Invoice Date</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="invoicedate" id="invoicedate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	    <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="duedate">Due Date</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="duedate" id="duedate" class="form-control" placeholder="" required>
+                    </div>
+                </div>          
+	    <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="jobno">Job No</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="jobno" id="jobno" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	   <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="clientname">Client Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="clientname" id="clientname" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+           <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="mainpartner">Main Partner</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="mainpartner" id="mainpartner" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	   <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="jobdonefor">Job Done For</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="jobdonefor" id="jobdonefor" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	  <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="netamount">Net Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="netamount" id="netamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	  <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="totalamount">Total Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="totalamount" id="totalamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	  <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="amountalreadydue">Amount Already Due</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="amountalreadydue" id="amountalreadydue" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	  <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="totalbalancedue">Total Balance Due</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="totalbalancedue" id="totalbalancedue" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	  <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="amountinwords">Amount in Words</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="amountinwords" id="amountinwords" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	 <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="servicetaxpr">Service Tax%</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="servicetaxpr" id="servicetaxpr" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="servicetaxamount">Service Tax Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="servicetaxamount" id="servicetaxamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="educesspr">Educess%</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="educesspr" id="educesspr" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="educessamount">Edu Cess Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="educessamount" id="educessamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="seceducesspr">Sec Edu Cess%</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="seceducesspr" id="seceducesspr" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="seceducessamount">Sec Edu Cess Amount</label>
+                    <div class="controls">
+                        <input type="number" data-ng-model="seceducessamount" id="seceducessamount" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+	<fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="remarks">Remarks</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

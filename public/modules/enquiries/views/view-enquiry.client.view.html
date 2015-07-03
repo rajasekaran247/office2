@@ -1,0 +1,23 @@
+<section data-ng-controller="EnquiriesController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="enquiry.name"></h1>
+	</div>
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == enquiry.user._id))">
+		<a class="btn btn-primary" href="/#!/enquiries/{{enquiry._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+<span>{{ enquiry.enquiryno }} {{ enquiry.enquirydate }} {{ enquiry.clientname }}{{ enquiry.handlingresource }} {{ enquiry.areaofenquiry }} {{ enquiry.modeofreceipt }} {{ enquiry.billable }} {{ enquiry.status }}{{ enquiry.groupaffilation }} {{ enquiry.preparedby }} {{ enquiry.remarks }}</span>
+<p>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="enquiry.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="enquiry.user.displayName"></span>
+		</em>
+	</small>
+</section>

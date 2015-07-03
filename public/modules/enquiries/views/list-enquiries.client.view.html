@@ -1,0 +1,19 @@
+<section data-ng-controller="EnquiriesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Enquiries</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="enquiry in enquiries" data-ng-href="#!/enquiries/{{enquiry._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="enquiry.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="enquiry.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading">{{enquiry.enquiryno}} {{enquiry.enquirydate}} {{enquiry.clientname}}{{enquiry.handlingresource}} {{enquiry.areaofenquiry}} {{enquiry.modeofreceipt}} {{enquiry.billable}} {{enquiry.status}}{{enquiry.groupaffilation}} {{enquiry.preparedby}} {{enquiry.remarks}}></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!enquiries.$resolved || enquiries.length">
+    	No Enquiries yet, why don't you <a href="/#!/enquiries/create">create one</a>?
+    </div>
+</section>

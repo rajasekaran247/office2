@@ -1,0 +1,19 @@
+<section data-ng-controller="InvoicedetailsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Invoicedetails</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="invoicedetail in invoicedetails" data-ng-href="#!/invoicedetails/{{invoicedetail._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="invoicedetail.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="invoicedetail.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="invoicedetail.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!invoicedetails.$resolved || invoicedetails.length">
+    	No Invoicedetails yet, why don't you <a href="/#!/invoicedetails/create">create one</a>?
+    </div>
+</section>
