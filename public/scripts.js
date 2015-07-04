@@ -7,6 +7,9 @@
 
 $(document).ready(function () {
 
+    // MetsiMenu
+    $('#side-menu').metisMenu();
+
 
     // Full height
     function fix_height() {
