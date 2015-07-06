@@ -60,13 +60,13 @@
                         <input type="Date" data-ng-model="Repeatreminderondays" id="Repeatreminderondays" class="form-control" placeholder="" required>
                     </div>
                 </div>
-                <div class="col-md-4 form-group">
+                <div class="col-md-5 form-group">
                     <label class="control-label" for="Repeatreminderendby">Repeat Reminder End By</label>
                     <div class="controls">
                         <input type="text" data-ng-model="Repeatreminderendby" id="Repeatreminderendby" class="form-control" placeholder="" required>
                     </div>
                 </div>
-                 <div class="col-md-6 form-group">
+                 <div class="col-md-5 form-group">
                     <label class="control-label" for="CreatedBy">Created By</label>
                     <div class="controls">
                         <input type="text" data-ng-model="CreatedBy" id="CreatedBy" class="form-control" placeholder="" required>

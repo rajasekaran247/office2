@@ -11,6 +11,7 @@
 		</a>
 	</div>
 	<small>
+	<span>{{ odoc.jobid }} {{ odoc.file }}</span>
 		<em class="text-muted">
 			Posted on
 			<span data-ng-bind="odoc.created | date:'mediumDate'"></span>

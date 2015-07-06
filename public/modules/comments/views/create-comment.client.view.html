@@ -3,39 +3,42 @@
         <h1>New Comment</h1>
     </div>
     <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+        <form data-ng-submit="create()" novalidate>
             <fieldset>
-                <div class="form-group">
+		<div class="row">
+                <div class="col-md-3 form-group">
                     <label class="control-label" for="JobId">Job Id</label>
                     <div class="controls">
                         <input type="Number" data-ng-model="JobId" id="JobId" class="form-control" placeholder="" required>
                     </div>
                 </div>
-		<div class="form-group">
+		<div class="col-md-3 form-group">
                     <label class="control-label" for="Comment">Comment</label>
                     <div class="controls">
                         <input type="text" data-ng-model="Comment" id="Comment" class="form-control" placeholder="" required>
                     </div>
                 </div>
- 		<div class="form-group">
+ 		<div class="col-md-3 form-group">
                     <label class="control-label" for="CommentedBy">Commented By</label>
                     <div class="controls">
                         <input type="text" data-ng-model="CommentedBy" id="CommentedBy" class="form-control" placeholder="" required>
                     </div>
                 </div>
- 		<div class="form-group">
+ 		<div class="col-md-3 form-group">
                     <label class="control-label" for="CommentedTime">Commented Time</label>
                     <div class="controls">
                         <input type="date" data-ng-model="CommentedTime" id="CommentedTime" class="form-control" placeholder="" required>
                     </div>
                 </div>
-
+		</div>
+		<div class="row">
                 <div class="form-group">
                     <input type="submit" class="btn btn-default">
                 </div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>
 				</div>
+		</div>
             </fieldset>
         </form>
     </div>
